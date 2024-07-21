@@ -30,11 +30,21 @@ install_software() {
     )
 
     for cask in "${casks[@]}"; do
-        brew install --cask $cask
+        read -p "Do you want to install $cask? (y/n): " answer
+        if [ "$answer" != "${answer#[Yy]}" ]; then
+            brew install --cask $cask
+        else
+            echo "Skipping $cask"
+        fi
     done
 
     for formula in "${formulas[@]}"; do
-        brew install $formula
+        read -p "Do you want to install $formula? (y/n): " answer
+        if [ "$answer" != "${answer#[Yy]}" ]; then
+            brew install $formula
+        else
+            echo "Skipping $formula"
+        fi
     done
 }
 
