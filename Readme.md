@@ -15,5 +15,5 @@
 ## How to run this script
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ValentinKolb/mac-setup/main/setup.bash)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ValentinKolb/mac-setup/main/script.bash)"
 ````
